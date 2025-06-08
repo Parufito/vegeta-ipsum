@@ -1,42 +1,83 @@
 <!DOCTYPE html>
 <html lang="ca">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>[CHANGEME - Web App Title]</title>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="manifest" href="manifest.json">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[CHANGEME - Web App Title]</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="manifest" href="manifest.json">
+      <!-- SEO -->
+      <meta name="description" content="[CHANGEME - Descripció WebApp]">
+      <meta name="keywords" content="change, me, keywords, here, separated, by, commas">
+      <meta name="author" content="Parufito (https://parufito.info)">
+      <link rel="canonical" href="[CHANGEME - WebApp URL]">
 
-  <!-- SEO -->
-  <meta name="description" content="[CHANGEME - Descripció WebApp]">
-  <meta name="keywords" content="change, me, keywords, here, separated, by, commas">
-  <meta name="author" content="Parufito (https://parufito.info)">
-  <link rel="canonical" href="[CHANGEME - WebApp URL]">
+      <!-- Open Graph -->
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="[CHANGEME - Web App Title]">
+      <meta property="og:description" content="[CHANGEME - Descripció WebApp]">
+      <meta property="og:image" content="[CHANGEME - WebApp URL]/images/og-card.png">
+      <meta property="og:url" content="[CHANGEME - WebApp URL]">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="[CHANGEME - Web App Title]">
-  <meta property="og:description" content="[CHANGEME - Descripció WebApp]">
-  <meta property="og:image" content="[CHANGEME - WebApp URL]/images/og-card.png">
-  <meta property="og:url" content="[CHANGEME - WebApp URL]">
+      <!-- Twitter Card -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="[CHANGEME - Web App Title]">
+      <meta name="twitter:description" content="[CHANGEME - Descripció WebApp]">
+      <meta name="twitter:image" content="[CHANGEME - WebApp URL]/images/twitter-card.png">
+      <meta name="twitter:url" content="[CHANGEME - WebApp URL]">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="[CHANGEME - Web App Title]">
-  <meta name="twitter:description" content="[CHANGEME - Descripció WebApp]">
-  <meta name="twitter:image" content="[CHANGEME - WebApp URL]/images/twitter-card.png">
-  <meta name="twitter:url" content="[CHANGEME - WebApp URL]">
+      <!-- Matomo -->
+    </head>
+    <body>
+        <div class="container">
+          <h1>Vegeta Ipsum</h1>
+          <p class="desc">Com el Lorem Ipsum però amb insults del Vegeta.</p>
 
-  <!-- Matomo -->
+        <div class="controls">
+            <div class="control-group">
+                <label for="numParagraphs">Nº paràgrafs:</label>
+                <select id="numParagraphs">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
 
-</head>
-<body>
-  <!-- [CHANGEME] Contingut principal aquí -->
-  <footer class="footer">
-    by: <a href="https://parufito.info" target="_blank" rel="noopener">@Parufito</a>
-  </footer>
-  <script src="js/script.js"></script>
-</body>
+            <div class="control-group">
+                <label for="paragraphLength">Llargada:</label>
+                <select id="paragraphLength">
+                    <option value="curt">Curt (3-6 frases)</option>
+                    <option value="mitja" selected>Mitjà (8-16 frases)</option>
+                    <option value="llarg">Llarg (15-25 frases)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="barrejaLlati">
+                    <input type="checkbox" id="barrejaLlati">
+                    Llatí
+                </label>
+            </div>
+
+            <button id="generateBtn"> ✨ Genera</button>
+        </div>
+
+          <div id="outputContainer">
+            <div id="output"></div>
+          </div>
+
+          <button id="copyBtn">📋 Copia</button>
+        </div>
+
+        <footer class="footer">
+        by: <a href="https://parufito.info" target="_blank" rel="noopener">@parufito</a> & <a href="https://etfelicitofill.cat/" target="_blank" rel="noopener">@etfelicitofill</a>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script src="js/frases.js"></script>
+    </body>
 </html>

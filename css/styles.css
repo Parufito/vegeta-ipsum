@@ -1,4 +1,163 @@
-html, body {
-    height: 100%;
+:root {
+    --dark-blue: #000724;
+    --bright-blue: #214ab5;
+    --light-bg: #f5f7fa;
+    --white: #fff;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    margin: 40px auto;
+    max-width: 800px;
+    background: var(--light-bg);
+    color: var(--dark-blue);
+}
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.desc {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1em;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    margin-bottom: var(--spacing-lg);
+    justify-content: space-between;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+}
+
+button#generateBtn {
+    flex-basis: 100%;
+    margin-top: 12px;
+}
+
+.control-group label {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#numParagraphs,
+#paragraphLength {
+    width: 60px;
+}
+
+#paragraphLength {
+    width: 175px;
+}
+
+select,
+button {
+    font: inherit;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+select {
+    background: var(--white);
+    border: 2px solid var(--bright-blue);
+}
+
+button {
+    background: var(--bright-blue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+#outputContainer {
+    background: var(--white);
+    padding: 24px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    margin-bottom: var(--spacing-md);
+}
+
+#output p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+footer a {
+    color: var(--bright-blue);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    .controls {
+        flex-direction: column;
+        padding: 14px 10px;
+    }
+
+    .control-group {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .desc,
+    #output p {
+        font-size: 0.95em;
+    }
+
+    footer {
+        font-size: 0.85em;
+        padding: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+    }
 }
