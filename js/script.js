@@ -38,6 +38,15 @@ function generarParagraf(ambInici) {
 document.getElementById("generateBtn").addEventListener("click", () => {
     const n = parseInt(document.getElementById("numParagraphs").value);
     output.innerHTML = "";
+
+if (n === 9000) {
+    output.innerHTML = `
+        <p class="over9000-msg">Què collons fots txitxarel·lo?! <br> No podem generar text per sobre de 9000!!!</p>
+        <img class="over9000-img" src="../images/over-9000.gif" alt="Over 9000">
+    `;
+    return;
+}
+
     for (let i = 0; i < n; i++) {
         output.innerHTML += generarParagraf(i === 0);
     }

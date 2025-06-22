@@ -23,6 +23,14 @@ body {
     color: var(--dark-blue);
 }
 
+.logo {
+    display: block;
+    margin: 32px auto 16px auto;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
 h1 {
     font-size: 1.5em;
     text-align: center;
@@ -43,7 +51,7 @@ h1 {
     padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     justify-content: space-between;
 }
 
@@ -65,10 +73,10 @@ button#generateBtn {
     cursor: pointer;
 }
 
-#numParagraphs,
-#paragraphLength {
-    width: 60px;
-}
+/*#numParagraphs,*/
+/*#paragraphLength {*/
+/*    width: 60px;*/
+/*}*/
 
 #paragraphLength {
     width: 175px;
@@ -112,6 +120,20 @@ button:hover {
     font-size: 1em;
     line-height: 1.5;
     margin-bottom: 16px;
+}
+
+#output .over9000-msg {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #b30000;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#output .over9000-img {
+    max-width: 100%;
+    display: block;
+    margin: 16px auto;
 }
 
 footer {
