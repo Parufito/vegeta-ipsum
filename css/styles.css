@@ -1,12 +1,12 @@
 :root {
-    --dark-blue: #000724;
-    --bright-blue: #214ab5;
+    --dark-blue: #000000;
+    --bright-blue: #00f2f2;
     --light-bg: #f5f7fa;
     --white: #fff;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
-    --border-radius: 12px;
+    --border-radius: 20px;
 }
 
 * {
@@ -17,42 +17,29 @@
 
 body {
     font-family: system-ui, sans-serif;
-    margin: 40px auto;
-    max-width: 800px;
-    background: var(--light-bg);
-    color: var(--dark-blue);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 .logo {
     display: block;
-    margin: 32px auto 16px auto;
+    margin: auto;
     max-width: 500px;
-    width: 100%;
-    height: auto;
-}
-
-h1 {
-    font-size: 1.5em;
-    text-align: center;
-    margin-bottom: var(--spacing-sm);
-}
-
-.desc {
-    text-align: center;
     margin-bottom: var(--spacing-lg);
-    font-size: 1em;
+}
+
+.container {
+    max-width: min(800px, 90vw);
+    margin: auto;
 }
 
 .controls {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    background: var(--white);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     margin-bottom: var(--spacing-md);
-    justify-content: space-between;
 }
 
 .control-group {
@@ -63,44 +50,27 @@ h1 {
     justify-content: center;
 }
 
-button#generateBtn {
-    flex-basis: 100%;
-    margin-top: 12px;
-}
-
-.control-group label {
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-/*#numParagraphs,*/
-/*#paragraphLength {*/
-/*    width: 60px;*/
-/*}*/
-
-#paragraphLength {
-    width: 175px;
+input[type="radio"] {
+    accent-color: var(--bright-blue);
 }
 
 select,
 button {
-    font: inherit;
     font-size: 1em;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
+    background: var(--bright-blue);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
 }
 
-select {
-    background: var(--white);
-    border: 2px solid var(--bright-blue);
+select:hover {
+    filter: brightness(1.1);
 }
 
 button {
-    background: var(--bright-blue);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
     width: 100%;
 }
 
@@ -109,15 +79,13 @@ button:hover {
 }
 
 #outputContainer {
-    background: var(--white);
     padding: 24px 20px;
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    border: 2px solid var(--bright-blue);
     margin-bottom: var(--spacing-md);
 }
 
 #output p {
-    font-size: 1em;
     line-height: 1.5;
     margin-bottom: 16px;
 }
@@ -125,13 +93,11 @@ button:hover {
 #output .over9000-msg {
     font-weight: bold;
     font-size: 1.2em;
-    color: #b30000;
-    margin-bottom: 16px;
+    color: var(--dark-blue);
     text-align: center;
 }
 
 #output .over9000-img {
-    max-width: 100%;
     display: block;
     margin: 16px auto;
 }
@@ -139,29 +105,38 @@ button:hover {
 footer {
     text-align: center;
     padding: var(--spacing-md);
+    font-size: 0.8em;
+    background-color: black;
+    color: white;
     margin-top: var(--spacing-lg);
-    font-size: 0.9em;
-    opacity: 0.8;
+}
+
+footer img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 15vh;
 }
 
 footer a {
-    color: var(--bright-blue);
-    text-decoration: none;
-    transition: opacity 0.2s ease;
+    color: var(--white);
+    font-weight: bold;
 }
 
 footer a:hover {
-    opacity: 0.8;
+    color: var(--bright-blue);
 }
 
 @media (max-width: 600px) {
-    body {
-        margin: 10px;
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-    .controls {
-        flex-direction: column;
-        padding: 14px 10px;
+    .logo {
+        max-width: 90vw;
+        margin-bottom: 0;
     }
 
     .control-group {
@@ -170,6 +145,11 @@ footer a:hover {
 
     h1 {
         font-size: 1.2em;
+    }
+
+    select,
+    button {
+        color: inherit;
     }
 
     .desc,
@@ -181,5 +161,10 @@ footer a:hover {
         font-size: 0.85em;
         padding: var(--spacing-sm);
         margin-top: var(--spacing-md);
+    }
+
+    .logo-footer {
+        max-width: 10vh;
+        margin-bottom: 10px;
     }
 }

@@ -7,7 +7,7 @@ function generarParagraf(ambInici) {
     let par = ambInici ? inici + " " : "";
 
     const llargada = document.getElementById("paragraphLength").value;
-    const barrejaLlati = document.getElementById("barrejaLlati").checked;
+    const barrejaLlati = document.querySelector('input[name="llengua"]:checked').value === "llati";
     let minFrases, maxFrases;
 
     switch(llargada) {
@@ -37,7 +37,7 @@ function generarParagraf(ambInici) {
     par = par.trim();
     par = par.charAt(0).toUpperCase() + par.slice(1);
 
-    return `<p>${par.trim()}</p>`;
+    return `<p>${par.trim()}.</p>`;
 }
 
 document.getElementById("generateBtn").addEventListener("click", () => {
@@ -46,7 +46,7 @@ document.getElementById("generateBtn").addEventListener("click", () => {
 
     if (n === 9000) {
         output.innerHTML = `
-            <p class="over9000-msg">Què collons fots txitxarel·lo?! <br> No podem generar text per sobre de 9000!!!</p>
+            <p class="over9000-msg">Què collons fots xitxarel·lo?! <br> No podem generar text per sobre de 9000!!!</p>
             <img class="over9000-img" src="./images/over-9000.gif" alt="Over 9000">
         `;
         return;
@@ -65,13 +65,13 @@ copyBtn.addEventListener("click", () => {
     tempElement.select();
     try {
         document.execCommand("copy");
-        copyBtn.textContent = "Copiat!";
+        copyBtn.textContent = "Ja és teu, però no el mereixes.";
     } catch (err) {
         copyBtn.textContent = "Error al copiar!";
     }
     document.body.removeChild(tempElement);
     setTimeout(() => {
-        copyBtn.textContent = "📋 Copia";
+        copyBtn.textContent = "📋 Vinga, copia";
     }, 2000);
 });
 

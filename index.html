@@ -3,85 +3,109 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>[CHANGEME - Web App Title]</title>
+      <title>Vegeta Ipsum</title>
       <link rel="icon" href="favicon.ico" type="image/x-icon">
       <link rel="stylesheet" href="css/styles.css">
       <link rel="manifest" href="manifest.json">
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
       <!-- SEO -->
-      <meta name="description" content="[CHANGEME - Descripció WebApp]">
-      <meta name="keywords" content="change, me, keywords, here, separated, by, commas">
+      <meta name="description" content="El text de farciment més poderós de l'univers">
+      <meta name="keywords" content="lorem ipsum, vegeta ipsum, text de farciment, generador de text, insults de vegeta, vegeta, dragon ball, humor, català">
       <meta name="author" content="Parufito (https://parufito.info)">
-      <link rel="canonical" href="[CHANGEME - WebApp URL]">
+      <link rel="canonical" href="https://vegetaipsum.cat/">
 
       <!-- Open Graph -->
       <meta property="og:type" content="website">
-      <meta property="og:title" content="[CHANGEME - Web App Title]">
-      <meta property="og:description" content="[CHANGEME - Descripció WebApp]">
-      <meta property="og:image" content="[CHANGEME - WebApp URL]/images/og-card.png">
-      <meta property="og:url" content="[CHANGEME - WebApp URL]">
+      <meta property="og:title" content="Vegeta Ipsum">
+      <meta property="og:description" content="El text de farciment més poderós de l'univers">
+      <meta property="og:image" content="https://vegetaipsum.cat//images/og-card.png">
+      <meta property="og:url" content="https://vegetaipsum.cat/">
 
       <!-- Twitter Card -->
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="[CHANGEME - Web App Title]">
-      <meta name="twitter:description" content="[CHANGEME - Descripció WebApp]">
-      <meta name="twitter:image" content="[CHANGEME - WebApp URL]/images/twitter-card.png">
-      <meta name="twitter:url" content="[CHANGEME - WebApp URL]">
+      <meta name="twitter:title" content="Vegeta Ipsum">
+      <meta name="twitter:description" content="El text de farciment més poderós de l'univers">
+      <meta name="twitter:image" content="https://vegetaipsum.cat//images/twitter-card.png">
+      <meta name="twitter:url" content="https://vegetaipsum.cat/">
 
       <!-- Matomo -->
     </head>
     <body>
-        <img src="./images/logo.png" class="logo" alt="Vegeta Ipsum Logo">
+        <a href="https://vegetaipsum.cat/"><img src="./images/logo.png" class="logo" alt="Vegeta Ipsum Logo"></a>
         <div class="container">
-<!--          <h1>Vegeta Ipsum</h1>-->
-<!--          <p class="desc">Com el Lorem Ipsum però amb insults del Vegeta.</p>-->
+            <div class="controls">
+                <div class="control-group">
+                    <label for="numParagraphs">Nº paràgrafs:</label>
+                    <select id="numParagraphs">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="9000">+9000</option>
+                    </select>
+                </div>
 
-        <div class="controls">
-            <div class="control-group">
-                <label for="numParagraphs">Nº paràgrafs:</label>
-                <select id="numParagraphs">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3" selected>3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="9000">+9000</option>
-                </select>
+                <div class="control-group">
+                    <label for="paragraphLength">Llargada:</label>
+                    <select id="paragraphLength">
+                        <option value="curt">Curt (3-6 frases)</option>
+                        <option value="mitja" selected>Mitjà (8-16 frases)</option>
+                        <option value="llarg">Llarg (15-25 frases)</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="vegetaRadio">
+                        <input type="radio" name="llengua" id="vegetaRadio" value="vegeta" checked>
+                        Vegeta
+                    </label>
+                    <label for="llatiRadio">
+                        <input type="radio" name="llengua" id="llatiRadio" value="llati">
+                        Vegeta+llatí
+                    </label>
+                </div>
+
+                <button id="generateBtn"> ✨ Endavant, insecte</button>
             </div>
 
-            <div class="control-group">
-                <label for="paragraphLength">Llargada:</label>
-                <select id="paragraphLength">
-                    <option value="curt">Curt (3-6 frases)</option>
-                    <option value="mitja" selected>Mitjà (8-16 frases)</option>
-                    <option value="llarg">Llarg (15-25 frases)</option>
-                </select>
-            </div>
+              <div id="outputContainer">
+                <div id="output">
+                    <p>Fart del clàssic Lorem Ipsum amb aquell llatí de missa de diumenge? Nosaltres també. Per això hem creat el Vegeta Ipsum, una eina per generar textos de farciment amb la força, l’orgull i la mala llet del príncep dels Saiyans.</p>
+                    <p>Aquí no trobaràs un “dolor sit amet”, sinó un bon “Kakarot, ets un inútil!”, o un “Només és una petita mostra del meu poder”. És perfecte per fer proves en dissenys, web, maquetes o on sigui que necessitis text fals... però amb caràcter.</p>
+                    <p>Com funciona:<br>Tria quants paràgrafs vols i si els vols curts, mitjans o llargs (com els monòlegs d’en Vegeta abans de repartir fuet).</p>
+                    <p>Escull l’idioma: català pur o català amb un toc de llatí (per fer-ho encara més èpic).</p>
+                    <p>Prem el botó “Endavant, insecte” i gaudeix com en Vegeta escup la seva veritat.</p>
+                    <p>Quan ja ho tinguis, fes clic a “Vinga, copia” i tindràs el text al porta-retalls. Ràpid i mortal.</p>
+                    <p>Així que deixa de fer servir textos avorrits i dona-li una mica de Super Saiyan al teu disseny</p>
+                </div>
+              </div>
 
-            <div class="control-group">
-                <label for="barrejaLlati">
-                    <input type="checkbox" id="barrejaLlati">
-                    Llatí
-                </label>
-            </div>
-
-            <button id="generateBtn"> ✨ Genera</button>
-        </div>
-
-          <div id="outputContainer">
-            <div id="output"></div>
-          </div>
-
-          <button id="copyBtn">📋 Copia</button>
+              <button id="copyBtn">📋 Vinga, copia</button>
         </div>
 
         <footer class="footer">
-        by: <a href="https://parufito.info" target="_blank" rel="noopener">@parufito</a> & <a href="https://www.caimary.com/" target="_blank" rel="noopener">@Shht</a>
-        <br>
-        for: <a href="https://pocafeina.cat/" target="_blank" rel="noopener">@pocafeina</a> & <a href="https://etfelicitofill.cat/" target="_blank" rel="noopener">@etfelicitofill</a>
+            <img src="./images/logo-footer.png" class="logo-footer">
+            Una idea de <a href="https://x.com/shht" target="_blank" rel="noopener">Miquel Caimary</a>,
+            aquell de <a href="https://www.caimary.com/" target="_blank" rel="noopener">Caimary Studio</a>,
+            creador d’<a href="https://etfelicitofill.cat/" target="_blank" rel="noopener">EtFelicitoFill</a>,
+            <a href="https://mastersofnaming.com/" target="_blank" rel="noopener">MastersOfNaming</a>,
+            <a href="https://x.com/tancsadiagonal" target="_blank" rel="noopener">TancsADiagonal</a>,
+            <a href="https://www.instagram.com/Tevetresi" target="_blank" rel="noopener">Tevetresí</a>
+            i membre de <a href="https://www.penyahelvetica.cat/" target="_blank" rel="noopener">la Penya Helvètica</a>.
+            <br>
+            Creat amb el codi del poderós <a href="https://parufito.info" target="_blank" rel="noopener">Parufito</a>
+            el de <a href="https://pocafeina.cat/" target="_blank" rel="noopener">pocafeina.cat</a>,
+            <a href="https://makers.cat/" target="_blank" rel="noopener">makers.cat</a>
+            del <a href="https://bernabeus.xyz/" target="_blank" rel="noopener">Bernabeuitzador</a>
+            i de <a href="https://hansiclick.pocafeina.cat/" target="_blank" rel="noopener">Hansi Click!</a>
+            <br>
+            Però si els crèdits son més llargs que el text generat! Colla de manefles!
         </footer>
 
         <script src="js/script.js"></script>
         <script src="js/frases.js"></script>
+
     </body>
 </html>

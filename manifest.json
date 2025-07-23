@@ -1,23 +1,23 @@
 {
-  "name": "[CHANGEME - Web App Title]",
-  "short_name": "[CHANGEME - Short name]",
-  "start_url": "[CHANGEME - Start URL]/",
+  "name": "Vegeta Ipsum",
+  "short_name": "Vegetaipsum",
+  "start_url": "https://vegetaipsum.cat",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#00f2f2",
   "icons": [
     {
-      "src": "/[CHANGEME - Start URL]/images/apple-touch-icon.png",
+      "src": "https://vegetaipsum.cat/images/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/[CHANGEME - Start URL]/images/icon-192x192.png",
+      "src": "https://vegetaipsum.cat/images/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/[CHANGEME - Start URL]/images/icon-512x512.png",
+      "src": "https://vegetaipsum.cat/images/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

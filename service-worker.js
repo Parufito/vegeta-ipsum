@@ -1,17 +1,17 @@
-const CACHE_NAME = '[CHANGEME - Web App Title]-cache-v0.1';
+const CACHE_NAME = 'Vegeta Ipsum-cache-v0.1';
 // Add all paths that you want to cache
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/favicon.ico',
-  '/manifest.json',
-  '/css/styles.css',
-  '/js/script.js',
-  '/images/apple-touch-icon.png',
-  '/images/icon-512x512.png',
-  '/images/icon-192x192.png',
-  '/images/twitter-card.png',
-  '/images/og-card.png'
+  // '/',
+  // '/index.html',
+  // '/favicon.ico',
+  // '/manifest.json',
+  // '/css/styles.css',
+  // '/js/script.js',
+  // '/images/apple-touch-icon.png',
+  // '/images/icon-512x512.png',
+  // '/images/icon-192x192.png',
+  // '/images/twitter-card.png',
+  // '/images/og-card.png'
 ];
 
 self.addEventListener('install', function(event) {
